@@ -39,48 +39,145 @@
     </header>
 
     <main id="contenu-principal">
-        <!-- SECTION CONTACT -->
-        <section class="section-contact" aria-labelledby="titre-contact">
-            <div class="contact-header">
-                <h1 id="titre-contact">Nous contacter</h1>
+        <main id="contenu-principal">
+    <section class="section-contact" aria-labelledby="titre-contact">
+        <div class="contact-header">
+            <h1 id="titre-contact">Nous contacter</h1>
 
-                <p class="contact-intro" id="contact-intro">
-                    Une question sur l'accessibilité du coffret ou envie de personnaliser votre abonnement ?
-                    Utilisez le formulaire ci-dessous, nous serons ravis de vous répondre.
-                </p>
-            </div>
+            <p class="contact-intro" id="contact-intro">
+                Remplissez ce formulaire : nous vous répondrons au plus vite. Les champs marqués “(obligatoire)” sont requis.
+            </p>
+        </div>
 
-            <div class="contact-form-wrapper">
-                <form class="contact-form" aria-describedby="contact-intro">
+        <div class="contact-form-wrapper">
+            <form class="contact-form" id="contact-form" aria-describedby="contact-intro" novalidate>
+                <!-- Identité -->
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Identité</legend>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prenom">Prénom (obligatoire)</label>
+                            <input
+                                type="text"
+                                id="prenom"
+                                name="prenom"
+                                placeholder="Ex : Anaïs"
+                                autocomplete="given-name"
+                                required
+                                aria-required="true"
+                            >
+                            <p class="field-help" id="help-prenom">
+                                Lettres, espaces, accents autorisés.
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom">Nom (obligatoire)</label>
+                            <input
+                                type="text"
+                                id="nom"
+                                name="nom"
+                                placeholder="Ex : D’Argent"
+                                autocomplete="family-name"
+                                required
+                                aria-required="true"
+                            >
+                            <p class="field-help" id="help-nom">
+                                Lettres, espaces, accents autorisés.
+                            </p>
+                        </div>
+                    </div>
+
                     <div class="form-group">
-                        <label for="nom">Nom</label>
+                        <label for="naissance">Date de naissance (obligatoire)</label>
                         <input
                             type="text"
-                            id="nom"
-                            name="nom"
-                            placeholder="Votre nom complet"
+                            id="naissance"
+                            name="naissance"
+                            inputmode="numeric"
+                            placeholder="JJ/MM/AAAA"
+                            autocomplete="bday"
                             required
                             aria-required="true"
+                            aria-describedby="help-naissance"
                         >
+                        <p class="field-help" id="help-naissance">
+                            Format attendu : JJ/MM/AAAA
+                        </p>
                     </div>
+                </fieldset>
+
+                <!-- Contact -->
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Coordonnées</legend>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail (obligatoire)</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="nom@domaine.fr"
+                                autocomplete="email"
+                                required
+                                aria-required="true"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input
+                                type="tel"
+                                id="telephone"
+                                name="telephone"
+                                placeholder="Ex : 06 12 34 56 78"
+                                autocomplete="tel"
+                                inputmode="tel"
+                                required
+                                aria-required="true"
+                                aria-describedby="help-telephone"
+                            >
+                            <p class="field-help" id="help-telephone">
+                                Accepte les espaces.
+                            </p>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Plage horaire -->
+                <fieldset class="form-fieldset" aria-describedby="help-plage">
+                    <legend class="form-legend">Plage horaire préférée</legend>
+
+                    <p class="field-help" id="help-plage">
+                        Choisissez une plage : cela nous aide à vous contacter au bon moment.
+                    </p>
+
+                    <div class="radio-group" role="radiogroup" aria-label="Choix de la plage horaire">
+                        <div class="radio-item">
+                            <input type="radio" id="plage-matin" name="plage" value="matin" required>
+                            <label for="plage-matin">Matin (9h - 12h)</label>
+                        </div>
+
+                        <div class="radio-item">
+                            <input type="radio" id="plage-aprem" name="plage" value="apres-midi">
+                            <label for="plage-aprem">Après-midi (14h - 18h)</label>
+                        </div>
+
+                        <div class="radio-item">
+                            <input type="radio" id="plage-soir" name="plage" value="soir">
+                            <label for="plage-soir">Soir (18h - 20h)</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Message -->
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Votre message</legend>
 
                     <div class="form-group">
-                        <label for="email">Adresse e-mail</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="votre.email@exemple.com"
-                            autocomplete="email"
-                            required
-                            aria-required="true"
-                            pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
-                            title="Veuillez entrer une adresse e-mail valide (ex: nom@domaine.fr)"
-                        >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message">Message (obligatoire)</label>
                         <textarea
                             id="message"
                             name="message"
@@ -91,25 +188,43 @@
                             data-autogrow="true"
                         ></textarea>
                     </div>
+                </fieldset>
 
-                    <button type="submit" class="btn btn-primary">
-                        Envoyer le message
-                    </button>
-                </form>
+                <!-- Zone d'erreurs globale (annonce lecteur d'écran) -->
+                <div class="form-errors" id="form-errors" role="alert" aria-live="assertive" hidden></div>
 
-                <div class="contact-popup" id="contact-popup" role="status" aria-live="polite" aria-atomic="true" hidden>
-                    <div class="popup-card">
-                        <div class="popup-check" aria-hidden="true">
-                            <span class="popup-checkmark"></span>
-                        </div>
-                        <p class="popup-text">
-                            Message envoyé. Merci !
-                        </p>
+                <button type="submit" class="btn btn-primary">
+                    Envoyer le message
+                </button>
+            </form>
+
+            <!-- Popup succès (petit toast) -->
+            <div class="contact-popup" id="contact-popup" role="status" aria-live="polite" aria-atomic="true" hidden>
+                <div class="popup-card">
+                    <div class="popup-check" aria-hidden="true">
+                        <span class="popup-checkmark"></span>
                     </div>
+                    <p class="popup-text">
+                        Message envoyé. Merci !
+                    </p>
                 </div>
             </div>
-        </section>
-    </main>
+
+            <!-- Modale confirmation (plus visible) -->
+            <dialog class="confirm-dialog" id="confirm-dialog" aria-labelledby="confirm-title">
+                <div class="confirm-inner">
+                    <h2 id="confirm-title">Message envoyé</h2>
+                    <p id="confirm-text">
+                        Merci. Votre demande a bien été prise en compte (simulation).
+                    </p>
+                    <button type="button" class="btn btn-primary" id="confirm-close">
+                        Fermer
+                    </button>
+                </div>
+            </dialog>
+        </div>
+    </section>
+</main>
 
     <!-- FOOTER (identique partout) -->
     <footer class="site-footer">

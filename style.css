@@ -1630,3 +1630,92 @@ section { scroll-margin-top: 100px; }
   cursor: pointer;
   text-decoration: underline;
 }
+
+/* =========================
+   FORM - ERREURS & AIDE
+========================= */
+.field-help {
+  margin: 6px 0 0;
+  font-size: 0.88rem;
+  color: #2e4335;
+  opacity: 0.85;
+}
+
+.field-error {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: #9b1c1c;
+  font-weight: 700;
+}
+
+[aria-invalid="true"] {
+  border-color: #9b1c1c !important;
+  outline: none;
+}
+
+.form-errors {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid #f2b8b8;
+  background: #fff3f3;
+  color: #7a0f0f;
+}
+
+.form-fieldset {
+  border: 1px solid #e0e0d8;
+  border-radius: 18px;
+  padding: 16px;
+  margin: 0 0 16px;
+  background: #ffffff;
+}
+
+.form-legend {
+  font-weight: 900;
+  color: #1f3a2e;
+  padding: 0 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Modale confirmation */
+.confirm-dialog {
+  border: 0;
+  padding: 0;
+  border-radius: 18px;
+  max-width: 520px;
+  width: calc(100% - 24px);
+}
+
+.confirm-dialog::backdrop {
+  background: rgba(0,0,0,0.45);
+}
+
+.confirm-inner {
+  background: #ffffff;
+  border: 1px solid #e0e0d8;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.confirm-inner h2 {
+  margin: 0 0 10px;
+  color: #1f3a2e;
+  font-weight: 900;
+}
+
+.confirm-inner p {
+  margin: 0 0 14px;
+  color: #2e4335;
+  line-height: 1.6;
+}
