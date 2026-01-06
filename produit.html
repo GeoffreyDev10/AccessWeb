@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleurs pour Tous - Le Coffret</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
+    <div class="about-dialog-inner">
+        <div class="about-dialog-header">
+            <h2 id="about-title">À propos de Fleurs pour Tous</h2>
+            <button type="button" class="about-close" data-close-about aria-label="Fermer la fenêtre">
+                ×
+            </button>
+        </div>
+
+        <div class="about-dialog-content">
+            <figure class="about-figure">
+                <img
+                    src="assets/images/a-propos.webp"
+                    alt="Photo d'atelier floral avec un bouquet en préparation."
+                    class="about-image"
+                >
+                <figcaption class="visually-hidden">
+                    Photo illustrative de la boutique.
+                </figcaption>
+            </figure>
+
+            <p>
+                Fleurs pour Tous propose des coffrets floraux pensés pour être accessibles à chacun.
+                Chaque bouquet est sélectionné pour ses contrastes, ses textures et sa description claire
+                (audio et formats adaptés disponibles).
+            </p>
+
+            <p>
+                Notre objectif : rendre la beauté des fleurs plus inclusive, du choix des couleurs
+                jusqu’à l’expérience de découverte à la maison.
+            </p>
+        </div>
+    </div>
+</dialog>
+
+<body>
+    <!-- Lien d'accès rapide pour lecteurs d’écran -->
+    <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+
+    <!-- HEADER (identique) -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navigation principale">
+            <div class="logo-area">
+                <a href="index.html#accueil" class="brand-link">
+                    <span class="logo-icon" aria-hidden="true"></span>
+                    <span class="brand-name">Fleurs pour Tous</span>
+                </a>
+            </div>
+
+            <details class="nav-toggle">
+                <summary class="burger" aria-label="Ouvrir ou fermer le menu">
+                    <span class="bars" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </summary>
+
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="#carousel" class="nav-link">Le Coffret</a></li>
+                    <li class="nav-item"><a href="#details" class="nav-link">Détails</a></li>
+                    <li class="nav-item"><a href="contact.html#contenu-principal" class="nav-link">Contact</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main id="contenu-principal">
+        <!-- SECTION 1 : CARROUSEL -->
+        <section id="carousel" class="section-carousel" aria-labelledby="titre-carousel">
+            <header class="carousel-header">
+                <h1 id="titre-carousel">Le Coffret : nos bouquets</h1>
+                <p class="carousel-intro">
+                    Faites défiler nos bouquets. Le carrousel défile automatiquement toutes les 7 secondes,
+                    et vous pouvez aussi utiliser les flèches pour naviguer.
+                </p>
+            </header>
+
+            <div class="carousel" role="region" aria-roledescription="carrousel" aria-label="Carrousel de bouquets">
+                <!-- Boutons de navigation (fonctionnels via JS plus tard) -->
+                <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Image précédente">
+                    ‹
+                </button>
+
+                <div class="carousel-viewport" tabindex="0" aria-label="Liste des images du carrousel">
+                    <ul class="carousel-track" aria-live="off">
+                        <li class="carousel-slide" aria-label="Bouquet 1 sur 5">
+                            <figure class="carousel-figure">
+                                <img
+                                    src="assets/images/placeholder-1.webp"
+                                    alt="Bouquet 1 (image à ajouter)"
+                                    class="carousel-image"
+                                >
+                                <figcaption class="visually-hidden">Bouquet 1</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="carousel-slide" aria-label="Bouquet 2 sur 5">
+                            <figure class="carousel-figure">
+                                <img
+                                    src="assets/images/placeholder-2.webp"
+                                    alt="Bouquet 2 (image à ajouter)"
+                                    class="carousel-image"
+                                >
+                                <figcaption class="visually-hidden">Bouquet 2</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="carousel-slide" aria-label="Bouquet 3 sur 5">
+                            <figure class="carousel-figure">
+                                <img
+                                    src="assets/images/placeholder-3.webp"
+                                    alt="Bouquet 3 (image à ajouter)"
+                                    class="carousel-image"
+                                >
+                                <figcaption class="visually-hidden">Bouquet 3</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="carousel-slide" aria-label="Bouquet 4 sur 5">
+                            <figure class="carousel-figure">
+                                <img
+                                    src="assets/images/placeholder-4.webp"
+                                    alt="Bouquet 4 (image à ajouter)"
+                                    class="carousel-image"
+                                >
+                                <figcaption class="visually-hidden">Bouquet 4</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="carousel-slide" aria-label="Bouquet 5 sur 5">
+                            <figure class="carousel-figure">
+                                <img
+                                    src="assets/images/placeholder-5.webp"
+                                    alt="Bouquet 5 (image à ajouter)"
+                                    class="carousel-image"
+                                >
+                                <figcaption class="visually-hidden">Bouquet 5</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+
+                <button type="button" class="carousel-btn carousel-btn-next" aria-label="Image suivante">
+                    ›
+                </button>
+            </div>
+            <div class="carousel-controls">
+                <button
+                type="button"
+                class="carousel-btn-pause"
+                aria-pressed="false"
+                aria-label="Mettre le carrousel en pause"
+                >
+                Pause
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 2 : DETAILS PRODUITS (2 + 2 + 1) -->
+        <section id="details" class="section-produits" aria-labelledby="titre-details">
+            <header class="produits-header">
+                <h2 id="titre-details">Détails des bouquets</h2>
+                <p class="produits-intro">
+                    Chaque bouquet est pensé pour être apprécié par tous : contraste, textures, description claire
+                    et options d’accessibilité.
+                </p>
+            </header>
+
+            <div class="produits-grid" role="list">
+                <!-- Ligne 1 (2 cartes) -->
+                <article class="produit-card" role="listitem" aria-labelledby="p1-titre">
+                    <header class="produit-card-header">
+                        <h3 id="p1-titre">Bouquet 1</h3>
+                    </header>
+                    <p class="produit-desc">
+                        Description à compléter : couleurs, textures, fleurs principales, sensations.
+                    </p>
+                    <ul class="produit-points">
+                        <li>Contraste : à préciser</li>
+                        <li>Textures : à préciser</li>
+                        <li>Option audio / braille : disponible</li>
+                    </ul>
+                    <div class="produit-actions">
+                        <button type="button" class="btn btn-primary" disabled aria-disabled="true">
+                            Achat à venir
+                        </button>
+                    </div>
+                </article>
+
+                <article class="produit-card" role="listitem" aria-labelledby="p2-titre">
+                    <header class="produit-card-header">
+                        <h3 id="p2-titre">Bouquet 2</h3>
+                    </header>
+                    <p class="produit-desc">
+                        Description à compléter : couleurs, textures, fleurs principales, sensations.
+                    </p>
+                    <ul class="produit-points">
+                        <li>Contraste : à préciser</li>
+                        <li>Textures : à préciser</li>
+                        <li>Option audio / braille : disponible</li>
+                    </ul>
+                    <div class="produit-actions">
+                        <button type="button" class="btn btn-primary" disabled aria-disabled="true">
+                            Achat à venir
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Ligne 2 (2 cartes) -->
+                <article class="produit-card" role="listitem" aria-labelledby="p3-titre">
+                    <header class="produit-card-header">
+                        <h3 id="p3-titre">Bouquet 3</h3>
+                    </header>
+                    <p class="produit-desc">
+                        Description à compléter : couleurs, textures, fleurs principales, sensations.
+                    </p>
+                    <ul class="produit-points">
+                        <li>Contraste : à préciser</li>
+                        <li>Textures : à préciser</li>
+                        <li>Option audio / braille : disponible</li>
+                    </ul>
+                    <div class="produit-actions">
+                        <button type="button" class="btn btn-primary" disabled aria-disabled="true">
+                            Achat à venir
+                        </button>
+                    </div>
+                </article>
+
+                <article class="produit-card" role="listitem" aria-labelledby="p4-titre">
+                    <header class="produit-card-header">
+                        <h3 id="p4-titre">Bouquet 4</h3>
+                    </header>
+                    <p class="produit-desc">
+                        Description à compléter : couleurs, textures, fleurs principales, sensations.
+                    </p>
+                    <ul class="produit-points">
+                        <li>Contraste : à préciser</li>
+                        <li>Textures : à préciser</li>
+                        <li>Option audio / braille : disponible</li>
+                    </ul>
+                    <div class="produit-actions">
+                        <button type="button" class="btn btn-primary" disabled aria-disabled="true">
+                            Achat à venir
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Ligne 3 (1 carte) -->
+                <article class="produit-card produit-card--full" role="listitem" aria-labelledby="p5-titre">
+                    <header class="produit-card-header">
+                        <h3 id="p5-titre">Bouquet 5</h3>
+                    </header>
+                    <p class="produit-desc">
+                        Description à compléter : couleurs, textures, fleurs principales, sensations.
+                    </p>
+                    <ul class="produit-points">
+                        <li>Contraste : à préciser</li>
+                        <li>Textures : à préciser</li>
+                        <li>Option audio / braille : disponible</li>
+                    </ul>
+                    <div class="produit-actions">
+                        <button type="button" class="btn btn-primary" disabled aria-disabled="true">
+                            Achat à venir
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section-video" aria-labelledby="titre-video-produit">
+            <div class="video-header">
+                <h2 id="titre-video-produit">
+                    Vidéo de présentation
+                </h2>
+
+                <p class="video-intro">
+                    Découvrez une présentation du coffret et de la démarche d’accessibilité.
+                </p>
+            </div>
+
+            <div class="video-container">
+                <figure>
+                    <video
+                        class="video-presentation"
+                        controls
+                        aria-describedby="description-video-produit"
+                    >
+                        <source src="media/interview_fleuriste.mp4" type="video/mp4">
+
+                        <track
+                            src="media/soustitres_interview.vtt"
+                            kind="subtitles"
+                            srclang="fr"
+                            label="Français"
+                            default
+                        >
+
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+
+                    <figcaption id="description-video-produit">
+                        Sous-titres inclus pour garantir l’accessibilité du contenu vidéo.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+        <!-- PIED DE PAGE -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <span class="logo-icon" aria-hidden="true"></span>
+                <span class="footer-brand">Fleurs pour Tous</span>
+            </div>
+
+            <div class="footer-links">
+                <button type="button" class="footer-link footer-link-btn" data-open-about>
+                    À propos
+                </button>
+
+                <a href="produit.html#carousel" class="footer-link">
+                    Produits
+                </a>
+
+                <a href="contact.html#contenu-principal" class="footer-link">
+                    Contact
+                </a>
+
+                <a href="#" class="footer-link">
+                    Mentions légales
+                </a>
+
+                <a href="index.html#accessibilite" class="footer-link">
+                    Déclaration d'accessibilité
+                </a>
+            </div>
+        </div>
+
+        <hr class="footer-separator">
+
+        <div class="footer-bottom">
+            <p>
+                © 2025 Fleurs pour Tous. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

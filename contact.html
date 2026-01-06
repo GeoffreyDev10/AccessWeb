@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleurs pour Tous - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navigation principale">
+            <div class="logo-area">
+                <a href="index.html#accueil" class="brand-link">
+                    <span class="logo-icon" aria-hidden="true"></span>
+                    <span class="brand-name">Fleurs pour Tous</span>
+                </a>
+            </div>
+
+            <details class="nav-toggle">
+                <summary class="burger" aria-label="Ouvrir ou fermer le menu">
+                    <span class="bars" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </summary>
+
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="produit.html#carousel" class="nav-link">Le Coffret</a></li>
+                    <li class="nav-item"><a href="index.html#accessibilite" class="nav-link">Accessibilité</a></li>
+                    <li class="nav-item"><a href="#contenu-principal" class="nav-link">Contact</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+
+    <main id="contenu-principal">
+        <!-- SECTION CONTACT -->
+        <section class="section-contact" aria-labelledby="titre-contact">
+            <div class="contact-header">
+                <h1 id="titre-contact">Nous contacter</h1>
+
+                <p class="contact-intro" id="contact-intro">
+                    Une question sur l'accessibilité du coffret ou envie de personnaliser votre abonnement ?
+                    Utilisez le formulaire ci-dessous, nous serons ravis de vous répondre.
+                </p>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form class="contact-form" aria-describedby="contact-intro">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            placeholder="Votre nom complet"
+                            required
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="votre.email@exemple.com"
+                            autocomplete="email"
+                            required
+                            aria-required="true"
+                            pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+                            title="Veuillez entrer une adresse e-mail valide (ex: nom@domaine.fr)"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Dites-nous comment nous pouvons vous aider..."
+                            required
+                            aria-required="true"
+                            data-autogrow="true"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Envoyer le message
+                    </button>
+                </form>
+
+                <div class="contact-popup" id="contact-popup" role="status" aria-live="polite" aria-atomic="true" hidden>
+                    <div class="popup-card">
+                        <div class="popup-check" aria-hidden="true">
+                            <span class="popup-checkmark"></span>
+                        </div>
+                        <p class="popup-text">
+                            Message envoyé. Merci !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (identique partout) -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <span class="logo-icon" aria-hidden="true"></span>
+                <span class="footer-brand">Fleurs pour Tous</span>
+            </div>
+
+            <div class="footer-links">
+                <button type="button" class="footer-link footer-link-btn" data-open-about>
+                    À propos
+                </button>
+
+                <a href="produit.html#carousel" class="footer-link">
+                    Produits
+                </a>
+
+                <a href="contact.html#contenu-principal" class="footer-link">
+                    Contact
+                </a>
+
+                <a href="#" class="footer-link">
+                    Mentions légales
+                </a>
+
+                <a href="index.html#accessibilite" class="footer-link">
+                    Déclaration d'accessibilité
+                </a>
+            </div>
+        </div>
+
+        <hr class="footer-separator">
+
+        <div class="footer-bottom">
+            <p>
+                © 2025 Fleurs pour Tous. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <!-- MODALE À PROPOS -->
+    <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
+        <div class="about-dialog-inner">
+            <div class="about-dialog-header">
+                <h2 id="about-title">À propos de Fleurs pour Tous</h2>
+                <button type="button" class="about-close" data-close-about aria-label="Fermer la fenêtre">×</button>
+            </div>
+
+            <div class="about-dialog-content">
+                <figure class="about-figure">
+                    <img
+                        src="assets/images/a-propos.webp"
+                        alt="Photo d'atelier floral avec un bouquet en préparation."
+                        class="about-image"
+                    >
+                    <figcaption class="visually-hidden">Photo illustrative de la boutique.</figcaption>
+                </figure>
+
+                <p>
+                    Fleurs pour Tous propose des coffrets floraux pensés pour être accessibles à chacun.
+                    Chaque bouquet est sélectionné pour ses contrastes, ses textures et sa description claire.
+                </p>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
