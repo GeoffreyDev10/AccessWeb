@@ -1,306 +1,292 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fleurs pour Tous - Coffret de fleurs accessible</title>
     <link rel="stylesheet" href="style.css">
-</head>
+  </head>
 
-<dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
+  <!-- zone dialog à propos -->
+  <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
     <div class="about-dialog-inner">
-        <div class="about-dialog-header">
-            <h2 id="about-title">À propos de Fleurs pour Tous</h2>
-            <button type="button" class="about-close" data-close-about aria-label="Fermer la fenêtre">
-                ×
-            </button>
-        </div>
+      <div class="about-dialog-header">
+        <h2 id="about-title">À propos de Fleurs pour Tous</h2>
+        <button
+          type="button"
+          class="about-close"
+          data-close-about
+          aria-label="Fermer la fenêtre"
+        >
+          ×
+        </button>
+      </div>
 
-        <div class="about-dialog-content">
-            <figure class="about-figure">
-                <img
-                    src="assets/images/a-propos.webp"
-                    alt="Photo d'atelier floral avec un bouquet en préparation."
-                    class="about-image"
-                >
-                <figcaption class="visually-hidden">
-                    Photo illustrative de la boutique.
-                </figcaption>
-            </figure>
+      <div class="about-dialog-content">
+        <figure class="about-figure">
+          <img
+            src="assets/images/a-propos.webp"
+            alt="Photo d'atelier floral avec un bouquet en préparation."
+            class="about-image"
+          >
+          <figcaption class="visually-hidden">
+            Photo illustrative de la boutique.
+          </figcaption>
+        </figure>
 
-            <p>
-                Fleurs pour Tous propose des coffrets floraux pensés pour être accessibles à chacun.
-                Chaque bouquet est sélectionné pour ses contrastes, ses textures et sa description claire
-                (audio et formats adaptés disponibles).
-            </p>
+        <p>
+          Fleurs pour Tous propose des coffrets floraux pensés pour être accessibles à chacun.
+          Chaque bouquet est sélectionné pour ses contrastes, ses textures et sa description claire
+          (audio et formats adaptés disponibles).
+        </p>
 
-            <p>
-                Notre objectif : rendre la beauté des fleurs plus inclusive, du choix des couleurs
-                jusqu’à l’expérience de découverte à la maison.
-            </p>
-        </div>
+        <p>
+          Notre objectif : rendre la beauté des fleurs plus inclusive, du choix des couleurs
+          jusqu’à l’expérience de découverte à la maison.
+        </p>
+      </div>
     </div>
-</dialog>
+  </dialog>
 
-<body>
-    <!-- Lien d'accès rapide pour lecteurs d’écran -->
+  <body>
+    <!-- zone lien d'accès rapide -->
     <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
 
-    <!-- HEADER -->
+    <!-- zone header -->
     <header class="site-header">
-        <nav class="main-nav" aria-label="Navigation principale">
-            <div class="logo-area">
-                <a href="#accueil" class="brand-link">
-                    <span class="logo-icon" aria-hidden="true"></span>
-                    <span class="brand-name">Fleurs pour Tous</span>
-                </a>
-            </div>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <div class="logo-area">
+          <a href="#accueil" class="brand-link">
+            <span class="logo-icon" aria-hidden="true"></span>
+            <span class="brand-name">Fleurs pour Tous</span>
+          </a>
+        </div>
 
-            <details class="nav-toggle">
-                <summary class="burger" aria-label="Ouvrir ou fermer le menu">
-                    <span class="bars" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </summary>
+        <details class="nav-toggle">
+          <summary class="burger" aria-label="Ouvrir ou fermer le menu">
+            <span class="bars" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </summary>
 
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#accueil" class="nav-link">Accueil</a></li>
-                    <li class="nav-item"><a href="#coffret" class="nav-link">Le Coffret</a></li>
-                    <li class="nav-item"><a href="#accessibilite" class="nav-link">Accessibilité</a></li>
-                    <li class="nav-item"><a href="contact.html#contenu-principal" class="nav-link">Contact</a></li>
-                </ul>
-            </details>
-        </nav>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#accueil" class="nav-link">Accueil</a></li>
+            <li class="nav-item"><a href="#coffret" class="nav-link">Le Coffret</a></li>
+            <li class="nav-item"><a href="#accessibilite" class="nav-link">Accessibilité</a></li>
+            <li class="nav-item">
+              <a href="contact.html#contenu-principal" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </details>
+      </nav>
     </header>
 
-    <!-- CONTENU PRINCIPAL -->
+    <!-- zone contenu principal -->
     <main id="contenu-principal">
-        <!-- SECTION HERO / APERÇU -->
-        <section id="accueil" class="hero" aria-labelledby="titre-hero">
-            <div class="hero-inner">
-                <div class="hero-text">
-                    <h1 id="titre-hero">
-                        Des fleurs pensées<br>
-                        pour <span class="hero-highlight">tous</span>
-                    </h1>
+      <!-- zone section hero -->
+      <section id="accueil" class="hero" aria-labelledby="titre-hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1 id="titre-hero">
+              Des fleurs pensées<br>
+              pour <span class="hero-highlight">tous</span>
+            </h1>
 
-                    <p class="hero-description">
-                        Un coffret mensuel de fleurs imaginé avec l’accessibilité au cœur du concept.
-                        Des contrastes visuels forts, des textures variées et une expérience inclusive,
-                        parce que chacun mérite d’apprécier la beauté de la nature.
-                    </p>
+            <p class="hero-description">
+              Un coffret mensuel de fleurs imaginé avec l’accessibilité au cœur du concept.
+              Des contrastes visuels forts, des textures variées et une expérience inclusive,
+              parce que chacun mérite d’apprécier la beauté de la nature.
+            </p>
 
-                    <div class="hero-actions">
-                        <a href="produit.html#carousel" class="btn btn-primary">Découvrir le Coffret</a>
-                        <a href="#accessibilite" class="btn btn-outline">
-                            En savoir plus sur l’accessibilité
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-media">
-                    <figure class="hero-figure">
-                        <img
-                            src="assets/images/Bouquet1.webp"
-                            alt="Bouquet de fleurs composé de tournesols contrastés, de roses rouges et de fleurs blanches."
-                            class="hero-image"
-                        >
-                        <figcaption class="visually-hidden">
-                            Bouquet utilisé dans le coffret Fleurs pour Tous.
-                        </figcaption>
-                    </figure>
-                </div>
+            <div class="hero-actions">
+              <a href="produit.html#carousel" class="btn btn-primary">
+                Découvrir le coffret
+              </a>
+              <a href="#accessibilite" class="btn btn-outline">
+                En savoir plus sur l’accessibilité
+              </a>
             </div>
-        </section>
+          </div>
 
-        <!-- SECTION SÉPARATION -->
-        <section id="coffret" class="section-separation" aria-labelledby="titre-coffret">
-            <div class="separation-inner">
-                <h2 id="titre-coffret" class="separation-title">
-                    Que contient le Coffret ?
-                </h2>
+          <div class="hero-media">
+            <figure class="hero-figure">
+              <img
+                src="assets/images/Bouquet1.webp"
+                alt="Bouquet de fleurs composé de tournesols contrastés, de roses rouges et de fleurs blanches."
+                class="hero-image"
+              >
+              <figcaption class="visually-hidden">
+                Bouquet utilisé dans le coffret Fleurs pour Tous.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
-                <p class="separation-description">
-                    Chaque mois, recevez une sélection soignée de fleurs pensées
-                    pour être appréciées par chacun, quelles que soient ses capacités.
-                </p>
+      <!-- zone section introduction coffret -->
+      <section id="coffret" class="section-separation" aria-labelledby="titre-coffret">
+        <div class="separation-inner">
+          <h2 id="titre-coffret" class="separation-title">
+            Que contient le Coffret ?
+          </h2>
+
+          <p class="separation-description">
+            Chaque mois, recevez une sélection soignée de fleurs pensées
+            pour être appréciées par chacun, quelles que soient ses capacités.
+          </p>
+        </div>
+      </section>
+
+      <!-- zone section détails coffret -->
+      <section class="section-coffret-details" aria-labelledby="titre-details-coffret">
+        <div class="coffret-container">
+          <!-- zone image coffret -->
+          <div class="coffret-image-wrapper">
+            <figure>
+              <img
+                src="assets/images/Bouquet2.webp"
+                alt="Coffret Fleurs pour Tous ouvert contenant des fleurs contrastées : rouge, blanc et jaune."
+                class="coffret-image"
+              >
+              <figcaption class="visually-hidden">
+                Exemple de coffret ouvert avec les fleurs contrastées du mois.
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- zone avantages coffret -->
+          <div class="coffret-avantages">
+            <article class="avantage-item">
+              <h3 class="avantage-titre">Fleurs à fort contraste</h3>
+              <p class="avantage-texte">
+                Fleurs choisies pour leurs couleurs distinctes et facilement reconnaissables.
+              </p>
+            </article>
+
+            <article class="avantage-item">
+              <h3 class="avantage-titre">Textures variées</h3>
+              <p class="avantage-texte">
+                Des pétales doux aux surfaces plus structurées pour une expérience tactile riche.
+              </p>
+            </article>
+
+            <article class="avantage-item">
+              <h3 class="avantage-titre">Fiche explicative simplifiée</h3>
+              <p class="avantage-texte">
+                Grande police, langage clair, description détaillée de chaque fleur du coffret.
+              </p>
+            </article>
+
+            <article class="avantage-item">
+              <h3 class="avantage-titre">QR code pour description audio</h3>
+              <p class="avantage-texte">
+                Scannez pour écouter une description vocale complète du bouquet.
+              </p>
+            </article>
+
+            <article class="avantage-item">
+              <h3 class="avantage-titre">Version braille disponible</h3>
+              <p class="avantage-texte">
+                Possibilité de recevoir une fiche explicative en braille sur demande.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- zone section accessibilité -->
+      <section
+        id="accessibilite"
+        class="section-accessibilite"
+        aria-labelledby="titre-accessibilite"
+      >
+        <div class="accessibilite-header">
+          <h2 id="titre-accessibilite">
+            L'accessibilité au cœur du projet
+          </h2>
+
+          <p class="accessibilite-intro">
+            Nous pensons que chacun doit pouvoir profiter de la beauté des fleurs.
+            C'est pourquoi l'accessibilité n'est pas un ajout, mais la base de notre approche.
+          </p>
+        </div>
+
+        <div class="accessibilite-cartes">
+          <article class="carte-accessibilite">
+            <div class="carte-icone" aria-hidden="true">
+              <img src="assets/icones/EntypoEye.svg" alt="" class="icone-accessibilite">
             </div>
-        </section>
+            <h3>Contraste de couleurs élevé</h3>
+            <p>
+              Fleurs et emballages choisis avec des contrastes renforcés pour une meilleure lisibilité.
+            </p>
+          </article>
 
-        <!-- SECTION CONTENU DU COFFRET -->
-        <section class="section-coffret-details" aria-labelledby="titre-details-coffret">
-            <div class="coffret-container">
-
-                <!-- IMAGE DU COFFRET -->
-                <div class="coffret-image-wrapper">
-                    <figure>
-                        <img
-                            src="assets/images/Bouquet2.webp"
-                            alt="Coffret Fleurs pour Tous ouvert contenant des fleurs contrastées : rouge, blanc et jaune."
-                            class="coffret-image"
-                        >
-                        <figcaption class="visually-hidden">
-                            Exemple de coffret ouvert avec les fleurs contrastées du mois.
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <!-- LISTE DES AVANTAGES -->
-                <div class="coffret-avantages">
-
-                    <article class="avantage-item">
-                        <h3 class="avantage-titre">Fleurs à fort contraste</h3>
-                        <p class="avantage-texte">
-                            Fleurs choisies pour leurs couleurs distinctes et facilement reconnaissables.
-                        </p>
-                    </article>
-
-                    <article class="avantage-item">
-                        <h3 class="avantage-titre">Textures variées</h3>
-                        <p class="avantage-texte">
-                            Des pétales doux aux surfaces plus structurées pour une expérience tactile riche.
-                        </p>
-                    </article>
-
-                    <article class="avantage-item">
-                        <h3 class="avantage-titre">Fiche explicative simplifiée</h3>
-                        <p class="avantage-texte">
-                            Grande police, langage clair, description détaillée de chaque fleur du coffret.
-                        </p>
-                    </article>
-
-                    <article class="avantage-item">
-                        <h3 class="avantage-titre">QR code pour description audio</h3>
-                        <p class="avantage-texte">
-                            Scannez pour écouter une description vocale complète du bouquet.
-                        </p>
-                    </article>
-
-                    <article class="avantage-item">
-                        <h3 class="avantage-titre">Version braille disponible</h3>
-                        <p class="avantage-texte">
-                            Possibilité de recevoir une fiche explicative en braille sur demande.
-                        </p>
-                    </article>
-
-                </div>
-
+          <article class="carte-accessibilite">
+            <div class="carte-icone" aria-hidden="true">
+              <img src="assets/icones/TdesignLettersT.svg" alt="" class="icone-accessibilite">
             </div>
-        </section>
+            <h3>Typographie lisible</h3>
+            <p>
+              Police claire, tailles de caractères confortables et aucun texte superflu ou décoratif.
+            </p>
+          </article>
 
-        <!-- SECTION ACCESSIBILITÉ -->
-        <section id="accessibilite" class="section-accessibilite" aria-labelledby="titre-accessibilite">
-            <div class="accessibilite-header">
-                <h2 id="titre-accessibilite">
-                    L'accessibilité au cœur du projet
-                </h2>
-
-                <p class="accessibilite-intro">
-                    Nous pensons que chacun doit pouvoir profiter de la beauté des fleurs.
-                    C'est pourquoi l'accessibilité n'est pas un ajout, mais la base de notre approche.
-                </p>
+          <article class="carte-accessibilite">
+            <div class="carte-icone" aria-hidden="true">
+              <img src="assets/icones/MdiHeadphones.svg" alt="" class="icone-accessibilite">
             </div>
+            <h3>Description audio</h3>
+            <p>
+              Un QR code permet d'écouter une description détaillée des fleurs du coffret.
+            </p>
+          </article>
 
-            <div class="accessibilite-cartes">
-
-                <article class="carte-accessibilite">
-                    <div class="carte-icone" aria-hidden="true">
-                        <img
-                            src="assets/icones/EntypoEye.svg"
-                            alt=""
-                            class="icone-accessibilite"
-                        >
-                    </div>
-                    <h3>Contraste de couleurs élevé</h3>
-                    <p>
-                        Fleurs et emballages choisis avec des contrastes renforcés pour une meilleure lisibilité.
-                    </p>
-                </article>
-
-                <article class="carte-accessibilite">
-                    <div class="carte-icone" aria-hidden="true">
-                        <img
-                            src="assets/icones/TdesignLettersT.svg"
-                            alt=""
-                            class="icone-accessibilite"
-                        >
-                    </div>
-                    <h3>Typographie lisible</h3>
-                    <p>
-                        Police claire, tailles de caractères confortables et aucun texte superflu ou décoratif.
-                    </p>
-                </article>
-
-                <article class="carte-accessibilite">
-                    <div class="carte-icone" aria-hidden="true">
-                        <img
-                            src="assets/icones/MdiHeadphones.svg"
-                            alt=""
-                            class="icone-accessibilite"
-                        >
-                    </div>
-                    <h3>Description audio</h3>
-                    <p>
-                        Un QR code permet d'écouter une description détaillée des fleurs du coffret.
-                    </p>
-                </article>
-
-                <article class="carte-accessibilite">
-                    <div class="carte-icone" aria-hidden="true">
-                        <img
-                            src="assets/icones/TablerArrowMoveRight.svg"
-                            alt=""
-                            class="icone-accessibilite"
-                        >
-                    </div>
-                    <h3>Contenus adaptés</h3>
-                    <p>
-                        Possibilité de demander une version en braille, grands caractères
-                        ou formats numériques pour les fiches explicatives.
-                    </p>
-                </article>
-
+          <article class="carte-accessibilite">
+            <div class="carte-icone" aria-hidden="true">
+              <img src="assets/icones/TablerArrowMoveRight.svg" alt="" class="icone-accessibilite">
             </div>
-        </section>
+            <h3>Contenus adaptés</h3>
+            <p>
+              Possibilité de demander une version en braille, grands caractères
+              ou formats numériques pour les fiches explicatives.
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
 
-    <!-- PIED DE PAGE -->
+    <!-- zone footer -->
     <footer class="site-footer">
-        <div class="footer-top">
-            <div class="footer-logo">
-                <span class="logo-icon" aria-hidden="true"></span>
-                <span class="footer-brand">Fleurs pour Tous</span>
-            </div>
-
-            <div class="footer-links">
-                <button type="button" class="footer-link footer-link-btn" data-open-about>
-                    À propos
-                </button>
-
-                <a href="produit.html#carousel" class="footer-link">
-                    Produits
-                </a>
-
-                <a href="contact.html#contenu-principal" class="footer-link">
-                    Contact
-                </a>
-
-                <a href="index.html#accessibilite" class="footer-link">
-                    Déclaration d'accessibilité
-                </a>
-            </div>
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-icon" aria-hidden="true"></span>
+          <span class="footer-brand">Fleurs pour Tous</span>
         </div>
 
-        <hr class="footer-separator">
+        <div class="footer-links">
+          <button type="button" class="footer-link footer-link-btn" data-open-about>
+            À propos
+          </button>
 
-        <div class="footer-bottom">
-            <p>
-                © 2025 Fleurs pour Tous. Tous droits réservés.
-            </p>
+          <a href="produit.html#carousel" class="footer-link">Produits</a>
+          <a href="contact.html#contenu-principal" class="footer-link">Contact</a>
+          <a href="index.html#accessibilite" class="footer-link">
+            Déclaration d'accessibilité
+          </a>
         </div>
+      </div>
+
+      <hr class="footer-separator">
+
+      <div class="footer-bottom">
+        <p>© 2025 Fleurs pour Tous. Tous droits réservés.</p>
+      </div>
     </footer>
-<script src="script.js"></script>
-</body>
+
+    <!-- zone scripts -->
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 /* =========================
-   RESET MINIMAL
+   zone reset minimal
 ========================= */
 * { box-sizing: border-box; }
 
@@ -11,7 +11,7 @@ body {
 }
 
 /* =========================
-   HEADER (MOBILE FIRST)
+   zone header (mobile first)
 ========================= */
 .site-header {
   position: fixed;
@@ -33,7 +33,7 @@ body {
 }
 
 /* =========================
-   LOGO (SVG EN VERT via mask)
+   zone logo (svg via mask)
 ========================= */
 .brand-link {
   display: inline-flex;
@@ -58,10 +58,10 @@ body {
 }
 
 /* =========================
-   BURGER (details/summary)
+   zone burger (details/summary)
 ========================= */
 .nav-toggle {
-  position: relative; /* ancre le dropdown en mobile */
+  position: relative;
 }
 
 .nav-toggle > summary {
@@ -69,9 +69,7 @@ body {
   cursor: pointer;
 }
 
-.nav-toggle > summary::-webkit-details-marker {
-  display: none;
-}
+.nav-toggle > summary::-webkit-details-marker { display: none; }
 
 .burger {
   width: 46px;
@@ -89,9 +87,7 @@ body {
   user-select: none;
 }
 
-.burger:hover {
-  background: #eaf4ee;
-}
+.burger:hover { background: #eaf4ee; }
 
 .burger:focus { outline: none; }
 .burger:focus-visible {
@@ -110,31 +106,22 @@ body {
   height: 2px;
   background: #2e4335;
   border-radius: 2px;
-}
 
-/* =========================
-   BURGER -> CROIX (quand open)
-========================= */
-.burger .bars span {
   transition: transform 180ms ease, opacity 180ms ease;
   transform-origin: center;
 }
 
-/* Quand details est ouvert */
+/* burger -> croix (quand open) */
 .nav-toggle[open] .burger .bars span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
-
-.nav-toggle[open] .burger .bars span:nth-child(2) {
-  opacity: 0;
-}
-
+.nav-toggle[open] .burger .bars span:nth-child(2) { opacity: 0; }
 .nav-toggle[open] .burger .bars span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
 /* =========================
-   MENU DROPDOWN (mobile)
+   zone menu dropdown (mobile)
 ========================= */
 .nav-list {
   list-style: none;
@@ -192,7 +179,7 @@ body {
 }
 
 /* =========================
-   ESPACE HEADER FIXE
+   zone offsets header fixe
 ========================= */
 main { padding-top: 90px; }
 section { scroll-margin-top: 100px; }
@@ -205,20 +192,13 @@ section { scroll-margin-top: 100px; }
 }
 
 /* =========================
-   DESKTOP (menu inline + barre gazon)
+   zone nav desktop (inline + barre gazon)
 ========================= */
 @media (min-width: 900px) {
-  /* cache le burger */
-  .nav-toggle > summary.burger {
-    display: none;
-  }
+  .nav-toggle > summary.burger { display: none; }
 
-  /* details ne doit plus servir de dropdown */
-  .nav-toggle {
-    position: static;
-  }
+  .nav-toggle { position: static; }
 
-  /* menu toujours visible en ligne */
   .nav-toggle > .nav-list {
     position: static;
     margin: 0;
@@ -242,7 +222,6 @@ section { scroll-margin-top: 100px; }
     transition: none;
   }
 
-  /* liens desktop */
   .nav-toggle > .nav-list .nav-link {
     padding: 8px 10px;
     border-radius: 10px;
@@ -252,16 +231,13 @@ section { scroll-margin-top: 100px; }
     text-decoration: none;
   }
 
-  .nav-toggle > .nav-list .nav-link:hover {
-    background: transparent;
-  }
+  .nav-toggle > .nav-list .nav-link:hover { background: transparent; }
 
-  /* barre gazon simple */
   .nav-toggle > .nav-list .nav-link::after {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -2px;
+    bottom: -6px;
 
     width: 70%;
     height: 3px;
@@ -283,48 +259,11 @@ section { scroll-margin-top: 100px; }
     opacity: 1;
   }
 }
-/* =========================
-   NAV LINK FX - BARRE GAZON SIMPLE
-========================= */
-@media (min-width: 900px) {
-  .nav-toggle > .nav-list .nav-link {
-    position: relative;
-    text-decoration: none;
-  }
-
-  .nav-toggle > .nav-list .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -6px;
-
-    width: 70%;
-    height: 3px;
-    border-radius: 999px;
-
-    background: #2e7d32; /* vert gazon */
-
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-    opacity: 0;
-
-    transition: transform 220ms ease, opacity 180ms ease;
-    pointer-events: none;
-  }
-
-  .nav-toggle > .nav-list .nav-link:hover::after,
-  .nav-toggle > .nav-list .nav-link:focus-visible::after {
-    transform: translateX(-50%) scaleX(1);
-    opacity: 1;
-  }
-}
 
 /* =========================
-   HERO (MOBILE FIRST)
+   zone hero (mobile first)
 ========================= */
-.hero {
-  padding: 28px 16px 34px;
-}
+.hero { padding: 28px 16px 34px; }
 
 .hero-inner {
   max-width: 1200px;
@@ -335,9 +274,7 @@ section { scroll-margin-top: 100px; }
   gap: 22px;
 }
 
-.hero-text {
-  max-width: 42rem;
-}
+.hero-text { max-width: 42rem; }
 
 .hero-text h1 {
   margin: 0 0 12px 0;
@@ -347,9 +284,7 @@ section { scroll-margin-top: 100px; }
   font-size: 2.2rem;
 }
 
-.hero-highlight {
-  color: #5b8f6b;
-}
+.hero-highlight { color: #5b8f6b; }
 
 .hero-description {
   margin: 0 0 18px 0;
@@ -359,14 +294,15 @@ section { scroll-margin-top: 100px; }
   max-width: 42rem;
 }
 
-/* Boutons hero */
 .hero-actions {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* Base boutons */
+/* =========================
+   zone boutons (base)
+========================= */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -379,47 +315,35 @@ section { scroll-margin-top: 100px; }
   text-decoration: none;
   border: 1px solid transparent;
 
-  min-height: 44px; /* accessibilite mobile */
+  min-height: 44px;
 }
 
-/* Primaire */
 .btn-primary {
   background: #5b8f6b;
   color: #ffffff;
   border-color: #5b8f6b;
 }
 
-/* Secondaire */
 .btn-outline {
   background: transparent;
   color: #1f3a2e;
   border-color: #d5d5cc;
 }
 
-/* Hover */
-.btn-primary:hover {
-  filter: brightness(0.95);
-}
+.btn-primary:hover { filter: brightness(0.95); }
+.btn-outline:hover { background: #eaf4ee; }
 
-.btn-outline:hover {
-  background: #eaf4ee;
-}
-
-/* Focus clavier */
 .btn:focus { outline: none; }
 .btn:focus-visible {
   outline: 2px solid #5b8f6b;
   outline-offset: 3px;
 }
 
-/* Image hero */
-.hero-media {
-  width: 100%;
-}
-
-.hero-figure {
-  margin: 0;
-}
+/* =========================
+   zone media hero
+========================= */
+.hero-media { width: 100%; }
+.hero-figure { margin: 0; }
 
 .hero-image {
   width: 100%;
@@ -431,7 +355,7 @@ section { scroll-margin-top: 100px; }
   background: #ffffff;
 }
 
-/* Visually hidden (pour figcaption) */
+/* zone visually hidden */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -444,35 +368,21 @@ section { scroll-margin-top: 100px; }
   border: 0;
 }
 
-/* =========================
-   HERO - TABLET
-========================= */
+/* hero tablet */
 @media (min-width: 768px) {
-  .hero {
-    padding: 44px 24px 54px;
-  }
-
-  .hero-text h1 {
-    font-size: 3rem;
-  }
-
-  .hero-description {
-    font-size: 1.05rem;
-  }
+  .hero { padding: 44px 24px 54px; }
+  .hero-text h1 { font-size: 3rem; }
+  .hero-description { font-size: 1.05rem; }
 
   .hero-actions {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .btn {
-    width: auto;
-  }
+  .btn { width: auto; }
 }
 
-/* =========================
-   HERO - DESKTOP
-========================= */
+/* hero desktop */
 @media (min-width: 1024px) {
   .hero-inner {
     flex-direction: row;
@@ -481,9 +391,7 @@ section { scroll-margin-top: 100px; }
     gap: 40px;
   }
 
-  .hero-text {
-    flex: 1;
-  }
+  .hero-text { flex: 1; }
 
   .hero-media {
     flex: 1;
@@ -491,21 +399,14 @@ section { scroll-margin-top: 100px; }
     justify-content: flex-end;
   }
 
-  .hero-image {
-    max-width: 520px;
-  }
+  .hero-image { max-width: 520px; }
 
-  .hero-text h1 {
-    font-size: 3.6rem;
-  }
-
-  .hero-description {
-    font-size: 1.1rem;
-  }
+  .hero-text h1 { font-size: 3.6rem; }
+  .hero-description { font-size: 1.1rem; }
 }
 
 /* =========================
-   SECTION SEPARATION
+   zone section séparation
 ========================= */
 .section-separation {
   padding: 42px 16px;
@@ -532,27 +433,16 @@ section { scroll-margin-top: 100px; }
   color: #2e4335;
 }
 
-/* Tablet */
 @media (min-width: 768px) {
-  .section-separation {
-    padding: 60px 24px;
-  }
-
-  .separation-title {
-    font-size: 2.2rem;
-  }
-
-  .separation-description {
-    font-size: 1.05rem;
-  }
+  .section-separation { padding: 60px 24px; }
+  .separation-title { font-size: 2.2rem; }
+  .separation-description { font-size: 1.05rem; }
 }
 
 /* =========================
-   SECTION COFFRET DETAILS
+   zone section coffret details
 ========================= */
-.section-coffret-details {
-  padding: 48px 16px;
-}
+.section-coffret-details { padding: 48px 16px; }
 
 .coffret-container {
   max-width: 1200px;
@@ -563,7 +453,6 @@ section { scroll-margin-top: 100px; }
   gap: 32px;
 }
 
-/* Image */
 .coffret-image-wrapper img {
   width: 100%;
   display: block;
@@ -571,7 +460,6 @@ section { scroll-margin-top: 100px; }
   border: 1px solid #e0e0d8;
 }
 
-/* Avantages */
 .coffret-avantages {
   display: grid;
   grid-template-columns: 1fr;
@@ -599,18 +487,11 @@ section { scroll-margin-top: 100px; }
   color: #2e4335;
 }
 
-/* Tablet */
 @media (min-width: 768px) {
-  .section-coffret-details {
-    padding: 64px 24px;
-  }
-
-  .coffret-avantages {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .section-coffret-details { padding: 64px 24px; }
+  .coffret-avantages { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
   .coffret-container {
     flex-direction: row;
@@ -618,10 +499,7 @@ section { scroll-margin-top: 100px; }
     gap: 48px;
   }
 
-  .coffret-image-wrapper {
-    flex: 1;
-  }
-
+  .coffret-image-wrapper { flex: 1; }
   .coffret-avantages {
     flex: 1;
     grid-template-columns: 1fr;
@@ -629,7 +507,7 @@ section { scroll-margin-top: 100px; }
 }
 
 /* =========================
-   SECTION ACCESSIBILITE
+   zone section accessibilité
 ========================= */
 .section-accessibilite {
   padding: 52px 16px;
@@ -656,7 +534,6 @@ section { scroll-margin-top: 100px; }
   font-size: 1rem;
 }
 
-/* Grille de cartes */
 .accessibilite-cartes {
   max-width: 1200px;
   margin: 0 auto;
@@ -666,30 +543,40 @@ section { scroll-margin-top: 100px; }
   gap: 16px;
 }
 
-/* Carte */
 .carte-accessibilite {
   background: #ffffff;
   border: 1px solid #e0e0d8;
   border-radius: 18px;
   padding: 18px;
+
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
-/* Zone icone + centrage */
 .carte-icone {
   width: 64px;
   height: 64px;
   border-radius: 18px;
 
-  background: #eef4f0;          /* plus clair, plus lisible */
+  background: #eef4f0;
   border: 1px solid #d4e4db;
 
   display: grid;
   place-items: center;
 
-  margin-bottom: 14px;
+  margin: 0 auto 14px;
 }
 
-/* Titres + texte */
+.icone-accessibilite {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.carte-icone img {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(13%) saturate(875%)
+    hue-rotate(92deg) brightness(92%) contrast(88%);
+}
+
 .carte-accessibilite h3 {
   margin: 0 0 8px;
   color: #1f3a2e;
@@ -704,31 +591,29 @@ section { scroll-margin-top: 100px; }
   line-height: 1.55;
 }
 
-/* Petit effet hover (discret) */
 .carte-accessibilite:hover {
-  border-color: #cfe3d6;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+  border-color: #c6ddcf;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
 }
 
-/* Focus visible si une carte devient interactive plus tard */
+.carte-accessibilite:hover .carte-icone {
+  background: #e2efe8;
+  border-color: #bcd8c9;
+  transition: background 220ms ease, border-color 220ms ease;
+}
+
 .carte-accessibilite:focus-within {
   outline: 2px solid #5b8f6b;
   outline-offset: 4px;
+  transform: translateY(-2px);
 }
 
-/* Tablet */
 @media (min-width: 768px) {
-  .section-accessibilite {
-    padding: 70px 24px;
-  }
+  .section-accessibilite { padding: 70px 24px; }
 
-  .accessibilite-header h2 {
-    font-size: 2.2rem;
-  }
-
-  .accessibilite-intro {
-    font-size: 1.05rem;
-  }
+  .accessibilite-header h2 { font-size: 2.2rem; }
+  .accessibilite-intro { font-size: 1.05rem; }
 
   .accessibilite-cartes {
     grid-template-columns: repeat(2, 1fr);
@@ -741,17 +626,8 @@ section { scroll-margin-top: 100px; }
   }
 }
 
-/* Centre le badge icone dans la carte */
-.carte-accessibilite .carte-icone {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Desktop */
 @media (min-width: 1024px) {
-  .accessibilite-cartes {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  .accessibilite-cartes { grid-template-columns: repeat(4, 1fr); }
 
   .carte-icone {
     width: 46px;
@@ -760,50 +636,7 @@ section { scroll-margin-top: 100px; }
 }
 
 /* =========================
-   ICONES ACCESSIBILITE
-========================= */
-.icone-accessibilite {
-  width: 32px;
-  height: 32px;
-  display: block;
-}
-
-/* Optionnel : couleur verte homogène */
-.carte-icone img {
-  filter: brightness(0) saturate(100%) invert(41%) sepia(13%) saturate(875%)
-          hue-rotate(92deg) brightness(92%) contrast(88%);
-}
-
-/* =========================
-   HOVER CARTES ACCESSIBILITE
-========================= */
-.carte-accessibilite {
-  transition:
-    transform 220ms ease,
-    box-shadow 220ms ease,
-    border-color 220ms ease;
-}
-
-.carte-accessibilite:hover {
-  transform: translateY(-4px);
-  border-color: #c6ddcf;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
-}
-
-/* Icône légèrement mise en avant */
-.carte-accessibilite:hover .carte-icone {
-  background: #e2efe8;
-  border-color: #bcd8c9;
-  transition: background 220ms ease, border-color 220ms ease;
-}
-
-/* Respect accessibilité clavier */
-.carte-accessibilite:focus-within {
-  transform: translateY(-2px);
-}
-
-/* =========================
-   SECTION VIDEO
+   zone section vidéo
 ========================= */
 .section-video {
   padding: 52px 16px;
@@ -830,7 +663,6 @@ section { scroll-margin-top: 100px; }
   font-size: 1rem;
 }
 
-/* Conteneur video */
 .video-container {
   max-width: 960px;
   margin: 0 auto;
@@ -839,13 +671,11 @@ section { scroll-margin-top: 100px; }
   justify-content: center;
 }
 
-/* Figure */
 .video-container figure {
   margin: 0;
   width: 100%;
 }
 
-/* Video responsive */
 .video-presentation {
   width: 100%;
   height: auto;
@@ -857,7 +687,6 @@ section { scroll-margin-top: 100px; }
   background: #f7f7f2;
 }
 
-/* Légende */
 .video-container figcaption {
   margin-top: 10px;
   font-size: 0.85rem;
@@ -865,36 +694,23 @@ section { scroll-margin-top: 100px; }
   text-align: center;
 }
 
-/* Focus clavier (accessibilité) */
 .video-presentation:focus-visible {
   outline: 2px solid #5b8f6b;
   outline-offset: 4px;
 }
 
-/* Tablet */
 @media (min-width: 768px) {
-  .section-video {
-    padding: 70px 24px;
-  }
-
-  .video-header h2 {
-    font-size: 2.2rem;
-  }
-
-  .video-intro {
-    font-size: 1.05rem;
-  }
+  .section-video { padding: 70px 24px; }
+  .video-header h2 { font-size: 2.2rem; }
+  .video-intro { font-size: 1.05rem; }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
-  .video-presentation {
-    border-radius: 22px;
-  }
+  .video-presentation { border-radius: 22px; }
 }
 
 /* =========================
-   SECTION CONTACT
+   zone section contact + form
 ========================= */
 .section-contact {
   padding: 52px 16px;
@@ -907,6 +723,8 @@ section { scroll-margin-top: 100px; }
   text-align: center;
 }
 
+/* safe: h1 (contact page) + h2 (si tu réutilises ailleurs) */
+.contact-header h1,
 .contact-header h2 {
   margin: 0 0 12px;
   font-size: 1.8rem;
@@ -921,7 +739,6 @@ section { scroll-margin-top: 100px; }
   font-size: 1rem;
 }
 
-/* Bloc formulaire */
 .contact-form-wrapper {
   max-width: 760px;
   margin: 0 auto;
@@ -934,10 +751,7 @@ section { scroll-margin-top: 100px; }
   padding: 18px;
 }
 
-/* Champs */
-.form-group {
-  margin-bottom: 14px;
-}
+.form-group { margin-bottom: 14px; }
 
 .form-group label {
   display: block;
@@ -947,7 +761,6 @@ section { scroll-margin-top: 100px; }
   font-size: 0.95rem;
 }
 
-/* Inputs / textarea */
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -961,27 +774,25 @@ section { scroll-margin-top: 100px; }
   font-size: 1rem;
   line-height: 1.4;
 
-  min-height: 44px; /* accessibilite mobile */
+  min-height: 44px;
 }
 
 .form-group textarea {
   min-height: 140px;
-  resize: vertical;
+  resize: none;
+  overflow: hidden;
 }
 
-/* Placeholder */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: #7a8b82;
 }
 
-/* Hover */
 .form-group input:hover,
 .form-group textarea:hover {
   border-color: #c6d9cf;
 }
 
-/* Focus clavier */
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
@@ -989,56 +800,34 @@ section { scroll-margin-top: 100px; }
   box-shadow: 0 0 0 3px rgba(91, 143, 107, 0.22);
 }
 
-/* Bouton submit : on reutilise ton .btn / .btn-primary */
 .contact-form button.btn {
   width: 100%;
   margin-top: 6px;
 }
 
-/* Tablet */
 @media (min-width: 768px) {
-  .section-contact {
-    padding: 70px 24px;
-  }
+  .section-contact { padding: 70px 24px; }
 
+  .contact-header h1,
   .contact-header h2 {
     font-size: 2.2rem;
   }
 
-  .contact-intro {
-    font-size: 1.05rem;
-  }
+  .contact-intro { font-size: 1.05rem; }
 
-  .contact-form {
-    padding: 22px;
-  }
+  .contact-form { padding: 22px; }
 
-  .contact-form button.btn {
-    width: auto;
-  }
+  .contact-form button.btn { width: auto; }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
-  .contact-form {
-    padding: 26px;
-  }
+  .contact-form { padding: 26px; }
 }
 
 /* =========================
-   TEXTAREA AUTO (pas redimensionnable)
+   zone popup confirmation contact
 ========================= */
-.form-group textarea {
-  resize: none;          /* empêche l’utilisateur de tirer pour agrandir */
-  overflow: hidden;      /* évite la scrollbar quand ça grandit */
-}
-
-/* =========================
-   POPUP CONFIRMATION CONTACT
-========================= */
-.contact-popup[hidden] {
-  display: none;
-}
+.contact-popup[hidden] { display: none; }
 
 .contact-popup {
   position: fixed;
@@ -1068,7 +857,6 @@ section { scroll-margin-top: 100px; }
   font-size: 0.95rem;
 }
 
-/* cercle + coche */
 .popup-check {
   width: 34px;
   height: 34px;
@@ -1100,7 +888,7 @@ section { scroll-margin-top: 100px; }
 }
 
 /* =========================
-   FOOTER
+   zone footer
 ========================= */
 .site-footer {
   background: #f7f7f2;
@@ -1117,7 +905,6 @@ section { scroll-margin-top: 100px; }
   gap: 16px;
 }
 
-/* Logo footer */
 .footer-logo {
   display: inline-flex;
   align-items: center;
@@ -1129,7 +916,6 @@ section { scroll-margin-top: 100px; }
   line-height: 1.2;
 }
 
-/* Liens */
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -1144,9 +930,7 @@ section { scroll-margin-top: 100px; }
   width: fit-content;
 }
 
-.footer-link:hover {
-  text-decoration: underline;
-}
+.footer-link:hover { text-decoration: underline; }
 
 .footer-link:focus { outline: none; }
 .footer-link:focus-visible {
@@ -1155,7 +939,6 @@ section { scroll-margin-top: 100px; }
   border-radius: 8px;
 }
 
-/* Separator */
 .footer-separator {
   max-width: 1200px;
   margin: 18px auto;
@@ -1163,7 +946,6 @@ section { scroll-margin-top: 100px; }
   border-top: 1px solid #e0e0d8;
 }
 
-/* Bas footer */
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
@@ -1176,11 +958,8 @@ section { scroll-margin-top: 100px; }
   line-height: 1.5;
 }
 
-/* Tablet */
 @media (min-width: 768px) {
-  .site-footer {
-    padding: 30px 24px;
-  }
+  .site-footer { padding: 30px 24px; }
 
   .footer-links {
     flex-direction: row;
@@ -1189,7 +968,6 @@ section { scroll-margin-top: 100px; }
   }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
   .footer-top {
     flex-direction: row;
@@ -1197,17 +975,13 @@ section { scroll-margin-top: 100px; }
     align-items: center;
   }
 
-  .footer-links {
-    justify-content: flex-end;
-  }
+  .footer-links { justify-content: flex-end; }
 
-  .footer-bottom p {
-    text-align: left;
-  }
+  .footer-bottom p { text-align: left; }
 }
 
 /* =========================
-   PAGE PRODUIT - BASE
+   zone page produit - base
 ========================= */
 .section-carousel,
 .section-produits {
@@ -1229,13 +1003,8 @@ section { scroll-margin-top: 100px; }
   line-height: 1.15;
 }
 
-.carousel-header h1 {
-  font-size: 1.9rem;
-}
-
-.produits-header h2 {
-  font-size: 1.7rem;
-}
+.carousel-header h1 { font-size: 1.9rem; }
+.produits-header h2 { font-size: 1.7rem; }
 
 .carousel-intro,
 .produits-intro {
@@ -1245,20 +1014,14 @@ section { scroll-margin-top: 100px; }
   font-size: 1rem;
 }
 
-/* Tablet */
 @media (min-width: 768px) {
   .section-carousel,
   .section-produits {
     padding: 70px 24px;
   }
 
-  .carousel-header h1 {
-    font-size: 2.3rem;
-  }
-
-  .produits-header h2 {
-    font-size: 2.1rem;
-  }
+  .carousel-header h1 { font-size: 2.3rem; }
+  .produits-header h2 { font-size: 2.1rem; }
 
   .carousel-intro,
   .produits-intro {
@@ -1267,13 +1030,9 @@ section { scroll-margin-top: 100px; }
 }
 
 /* =========================
-   PAGE PRODUIT - CARROUSEL (CSS)
-   - Scroll horizontal + snap
-   - Flèches par-dessus
+   zone page produit - carrousel
 ========================= */
-.section-carousel {
-  background: #ffffff;
-}
+.section-carousel { background: #ffffff; }
 
 .carousel {
   max-width: 1100px;
@@ -1281,7 +1040,6 @@ section { scroll-margin-top: 100px; }
   position: relative;
 }
 
-/* Zone scrollable */
 .carousel-viewport {
   overflow-x: auto;
   overflow-y: hidden;
@@ -1293,49 +1051,44 @@ section { scroll-margin-top: 100px; }
   border: 1px solid #e0e0d8;
   background: #f7f7f2;
 
-  /* évite une barre de scroll trop visible selon navigateurs */
-  scrollbar-width: thin;
+  scrollbar-width: none;        /* Firefox */
 }
 
-/* Track */
+.carousel-viewport::-webkit-scrollbar {
+  display: none;                /* Chrome / Safari / Edge */
+}
+
 .carousel-track {
   list-style: none;
   margin: 0;
   padding: 0;
 
   display: flex;
-  gap: 0; /* 1 slide plein écran */
+  gap: 0;
 }
 
-/* Chaque slide fait 100% du viewport */
 .carousel-slide {
   flex: 0 0 100%;
   scroll-snap-align: start;
 }
 
-/* Image */
-.carousel-figure {
-  margin: 0;
-}
+.carousel-figure { margin: 0; }
 
 .carousel-image {
   width: 100%;
   height: auto;
   display: block;
 
-  /* ratio propre, tu pourras ajuster plus tard */
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
-/* Focus clavier sur la zone */
 .carousel-viewport:focus { outline: none; }
 .carousel-viewport:focus-visible {
   outline: 2px solid #5b8f6b;
   outline-offset: 4px;
 }
 
-/* Flèches */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -1356,9 +1109,7 @@ section { scroll-margin-top: 100px; }
   z-index: 2;
 }
 
-.carousel-btn:hover {
-  background: #eaf4ee;
-}
+.carousel-btn:hover { background: #eaf4ee; }
 
 .carousel-btn:focus { outline: none; }
 .carousel-btn:focus-visible {
@@ -1366,11 +1117,9 @@ section { scroll-margin-top: 100px; }
   outline-offset: 3px;
 }
 
-/* Placement */
 .carousel-btn-prev { left: 10px; }
 .carousel-btn-next { right: 10px; }
 
-/* Mobile : flèches un peu plus petites */
 @media (max-width: 480px) {
   .carousel-btn {
     width: 40px;
@@ -1380,15 +1129,12 @@ section { scroll-margin-top: 100px; }
   .carousel-btn-next { right: 8px; }
 }
 
-/* Desktop : bordures plus douces */
 @media (min-width: 1024px) {
-  .carousel-viewport {
-    border-radius: 22px;
-  }
+  .carousel-viewport { border-radius: 22px; }
 }
 
 /* =========================
-   BOUTON PAUSE CARROUSEL
+   zone bouton pause carrousel
 ========================= */
 .carousel-controls {
   display: flex;
@@ -1408,7 +1154,6 @@ section { scroll-margin-top: 100px; }
 
   cursor: pointer;
 
-  /* Animation plus douce */
   transition:
     background-color 280ms ease,
     color 280ms ease,
@@ -1437,13 +1182,10 @@ section { scroll-margin-top: 100px; }
 }
 
 /* =========================
-   PAGE PRODUIT - DETAILS (CARTES)
+   zone page produit - détails
 ========================= */
-.section-produits {
-  background: #f7f7f2;
-}
+.section-produits { background: #f7f7f2; }
 
-/* Grille */
 .produits-grid {
   max-width: 1100px;
   margin: 0 auto;
@@ -1453,15 +1195,15 @@ section { scroll-margin-top: 100px; }
   gap: 16px;
 }
 
-/* Carte */
 .produit-card {
   background: #ffffff;
   border: 1px solid #e0e0d8;
   border-radius: 18px;
   padding: 18px;
+
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
-/* Titres */
 .produit-card h3 {
   margin: 0 0 10px;
   color: #1f3a2e;
@@ -1469,14 +1211,12 @@ section { scroll-margin-top: 100px; }
   font-size: 1.2rem;
 }
 
-/* Texte */
 .produit-desc {
   margin: 0 0 12px;
   color: #2e4335;
   line-height: 1.6;
 }
 
-/* Points */
 .produit-points {
   margin: 0 0 14px;
   padding-left: 18px;
@@ -1484,24 +1224,14 @@ section { scroll-margin-top: 100px; }
   line-height: 1.55;
 }
 
-.produit-points li {
-  margin: 6px 0;
-}
+.produit-points li { margin: 6px 0; }
 
-/* Actions */
 .produit-actions {
   display: flex;
   justify-content: flex-start;
 }
 
-.produit-actions .btn {
-  width: 100%;
-}
-
-/* Hover doux (desktop surtout) */
-.produit-card {
-  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-}
+.produit-actions .btn { width: 100%; }
 
 .produit-card:hover {
   transform: translateY(-3px);
@@ -1509,47 +1239,35 @@ section { scroll-margin-top: 100px; }
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Focus si un élément interne est focus */
 .produit-card:focus-within {
   outline: 2px solid #5b8f6b;
   outline-offset: 4px;
 }
 
-/* Tablet : 2 colonnes (=> 2 puis 2), et la dernière en pleine largeur */
 @media (min-width: 768px) {
   .produits-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
   }
 
-  .produit-card {
-    padding: 22px;
-  }
+  .produit-card { padding: 22px; }
 
-  .produit-actions .btn {
-    width: auto;
-  }
+  .produit-actions .btn { width: auto; }
 
-  /* La carte full (Bouquet 5) prend toute la largeur */
-  .produit-card--full {
-    grid-column: 1 / -1;
-  }
+  .produit-card--full { grid-column: 1 / -1; }
 }
 
-/* Desktop : cartes un peu plus “grosses” */
 @media (min-width: 1024px) {
   .produit-card {
     padding: 24px;
     border-radius: 22px;
   }
 
-  .produit-card h3 {
-    font-size: 1.28rem;
-  }
+  .produit-card h3 { font-size: 1.28rem; }
 }
 
 /* =========================
-   MODALE À PROPOS
+   zone modale à propos
 ========================= */
 .about-dialog {
   border: 0;
@@ -1559,9 +1277,7 @@ section { scroll-margin-top: 100px; }
   width: calc(100% - 24px);
 }
 
-.about-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.45);
-}
+.about-dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
 
 .about-dialog-inner {
   background: #ffffff;
@@ -1575,6 +1291,7 @@ section { scroll-margin-top: 100px; }
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+
   padding: 16px;
   background: #f7f7f2;
   border-bottom: 1px solid #e0e0d8;
@@ -1594,14 +1311,13 @@ section { scroll-margin-top: 100px; }
   border: 1px solid #e0e0d8;
   background: #ffffff;
   cursor: pointer;
+
   font-size: 1.4rem;
   line-height: 1;
   color: #1f3a2e;
 }
 
-.about-close:hover {
-  background: #eaf4ee;
-}
+.about-close:hover { background: #eaf4ee; }
 
 .about-dialog-content {
   padding: 16px;
@@ -1609,9 +1325,7 @@ section { scroll-margin-top: 100px; }
   line-height: 1.6;
 }
 
-.about-figure {
-  margin: 0 0 12px;
-}
+.about-figure { margin: 0 0 12px; }
 
 .about-image {
   width: 100%;
@@ -1621,7 +1335,7 @@ section { scroll-margin-top: 100px; }
   border: 1px solid #e0e0d8;
 }
 
-/* Footer link bouton (pour garder le même look que les <a>) */
+/* zone footer link bouton */
 .footer-link-btn {
   font: inherit;
   background: transparent;
@@ -1632,7 +1346,7 @@ section { scroll-margin-top: 100px; }
 }
 
 /* =========================
-   FORM - ERREURS & AIDE
+   zone form - erreurs & aide
 ========================= */
 .field-help {
   margin: 6px 0 0;
@@ -1683,12 +1397,12 @@ section { scroll-margin-top: 100px; }
 }
 
 @media (min-width: 768px) {
-  .form-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .form-row { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Modale confirmation */
+/* =========================
+   zone modale confirmation
+========================= */
 .confirm-dialog {
   border: 0;
   padding: 0;
@@ -1697,9 +1411,7 @@ section { scroll-margin-top: 100px; }
   width: calc(100% - 24px);
 }
 
-.confirm-dialog::backdrop {
-  background: rgba(0,0,0,0.45);
-}
+.confirm-dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
 
 .confirm-inner {
   background: #ffffff;
@@ -1718,4 +1430,69 @@ section { scroll-margin-top: 100px; }
   margin: 0 0 14px;
   color: #2e4335;
   line-height: 1.6;
+}
+
+/* =========================
+   zone bouton "achat à venir"
+========================= */
+.btn-coming[aria-disabled="true"] {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.btn-coming[aria-disabled="true"]:hover {
+  transform: none;
+}
+
+/* zone page contact - fond sous le header */
+.page-contact {
+  background: #f7f7f2;
+}
+
+.page-contact .section-contact {
+  padding-top: 8px;
+}
+
+/* zone about dialog - image */
+.about-dialog .about-image {
+  max-height: 280px;          /* ajuste si besoin */
+  width: 100%;
+  object-fit: cover;
+}
+
+/* zone about dialog - contenu scrollable */
+.about-dialog-content {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* ajout de fin */
+
+/* zone hero - CTA principal */
+.hero .btn-primary {
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  box-shadow: 0 10px 30px rgba(91, 143, 107, 0.35);
+  transform: translateY(0);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease;
+}
+
+/* zone hero - CTA interaction */
+.hero .btn-primary:hover,
+.hero .btn-primary:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgba(91, 143, 107, 0.45);
+}
+
+@keyframes cta-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(91, 143, 107, 0.45); }
+  70%  { box-shadow: 0 0 0 14px rgba(91, 143, 107, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(91, 143, 107, 0); }
+}
+
+.hero .btn-primary {
+  animation: cta-pulse 2.8s ease-out infinite;
 }
